@@ -1,0 +1,11 @@
+<h2>Lista de Provincias</h2>
+
+<div class="provincias-container">
+  <div *ngFor="let provincia of provincias">
+    <div class="provincia">
+      <div>{{ provincia.NOMBRE_PROVINCIA }}</div>
+      <button (click)="eliminarProvincia(provincia)">Eliminar</button>
+    </div>
+  </div>
+</div>
+
