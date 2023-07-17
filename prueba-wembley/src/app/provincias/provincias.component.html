@@ -1,11 +1,18 @@
-<h2>Lista de Provincias</h2>
+<div class="cabecera">
+  <h1>Lista de Provincias</h1>
 
+</div>
 <div class="provincias-container">
-  <div *ngFor="let provincia of provincias">
-    <div class="provincia">
-      <div><a [routerLink]="['/provincia', provincia.NOMBRE_PROVINCIA]">{{ provincia.NOMBRE_PROVINCIA }}</a></div>
-      <button (click)="eliminarProvincia(provincia)">Eliminar</button>
+    <div *ngFor="let provincia of provincias">
+      <div class="provincia">
+        <div>
+          <a [routerLink]="['/provincia', provincia.CODPROV, provincia.NOMBRE_PROVINCIA]">
+            {{ provincia.NOMBRE_PROVINCIA }}
+          </a>
+        </div>
+        <button (click)="eliminarProvincia(provincia)">Eliminar</button>
+      </div>
     </div>
   </div>
-</div>
+  
 

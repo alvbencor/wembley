@@ -1,1 +1,189 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(237, 237, 237);
+    margin: 0 auto;
+    color: rgb(29, 29, 29);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cuerpo{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cabecera{
+    width: 100vw;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+    background: rgb(12, 8, 87);
+    background: linear-gradient(32deg, rgb(12, 8, 87) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.fecha{
+    color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    padding:1rem;
+}
+h1{
+    font-size: 3rem;
+    color: aliceblue;
+    letter-spacing: .6rem;
+}
+
+.ciudades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .ciudad {
+    max-width: 80%;
+    list-style: none;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .ciudad > img {
+    width: 20%;
+  }
+  
+  .ciudad > h3 {
+    text-transform: uppercase;
+  }
+  
+  .ciudad > hr {
+    border: none;
+    height: 1px;
+    background-color: #eae8e8;
+  }
+  
+  .ciudad > span {
+    font-size: 3rem;
+    color: blue;
+  }
+  
+  .ciudad .temperaturas {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+.contenidoCiudad{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+
+.contenidoCiudad > img{
+    width: 20%;
+}
+.contenidoCiudad > h3{
+    text-transform: uppercase;
+}
+
+
+.contenidoCiudad > hr{
+    border: none;
+    height: 1px;
+    background-color: #eae8e8;
+}
+
+.contenidoCiudad > span{
+    font-size: 3rem;
+    color: blue;
+}
+
+.temperaturas{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.prevision{
+    width: 50%;
+    padding: 2rem;
+    margin: 0 auto;
+    
+}
+
+.fecha{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fecha > button{
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 0;
+    min-width: 150px;
+}
+
+.hoy, .tomorrow{
+    border-left: 4px solid black;
+    padding-left: 1rem;
+}
+.volver{
+    width: 100%;
+}
+.volver > a{
+    display: flex;
+    justify-content: right;
+    color: white;
+    padding-right: 3rem;
+    text-decoration: none;
+    font-weight: 300;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.flecha{
+    width: 1rem;
+    filter:invert(1);
+    margin-right: .5rem;
+}
+
+.provincias-container {
+    width: 80vh;
+    max-height: 40vh;
+    margin: 0 auto;
+    overflow-y: auto;
+    text-align: center;
+    margin-top: 10vh;
+  }
+  
+  .provincia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .provincia:hover{
+    background-color: aliceblue;
+    border-left: 3px solid rgb(21, 42, 228);
+  }
+  
+  .provincia > button {
+    background-color: #f53838;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+  }
+
+  .provincia > a{
+    cursor: pointer;
+  }

@@ -5,7 +5,7 @@ import { ProvinciaDetalleComponent } from './provincia-detalle/provincia-detalle
 
 const routes: Routes = [
   { path: '', component: ProvinciasComponent }, 
-  { path: 'provincia/:nombre', component: ProvinciaDetalleComponent },
+  { path: 'provincia/:codigo/:nombre', component: ProvinciaDetalleComponent },
 ];
 
 @NgModule({

@@ -1,1 +1,51 @@
-<p>provincia-detalle works!</p>
+<div class="cabecera">
+  <div class="volver">
+    <a href="">
+      <img src="assets/icons/flecha.svg" alt="" class="flecha"> INICIO</a>
+  </div>
+  <h1>{{ nombreProvincia }}</h1>
+  <div class="fecha">
+    <button (click)="mostrarHoyFunc()">HOY</button>
+    <button (click)="mostrarMananaFunc()">MAÑANA</button>
+  </div>
+</div>
+
+<div class="cuerpo">
+  <div class="prevision">
+    <ng-container *ngIf="mostrarHoy">
+      <div class="hoy">
+        <h2>El tiempo hoy {{ fechaHoy }}</h2>
+        <p>{{ today }}</p>
+      </div>
+    </ng-container>
+  
+    <ng-container *ngIf="mostrarManana">
+      <div class="tomorrow">
+        <h2>Predicción para mañana {{ fechaManana }}</h2>
+        <p>{{ tomorrow }}</p>
+      </div>
+    </ng-container>
+  </div>
+  
+
+
+  <div class="ciudades">
+    <div *ngFor="let ciudad of ciudades" class="ciudad">
+      <div class="contenidoCiudad">
+        <h3>{{ ciudad.name }}</h3>
+        <hr>
+        <img *ngIf="ciudad.temperatures.min < 0" src="assets/icons/ice.png" alt="Ice">
+        <img *ngIf="ciudad.temperatures.min >= 0 && ciudad.temperatures.min <= 10" src="assets/icons/cloud.png" alt="Cloud">
+        <img *ngIf="ciudad.temperatures.min > 10" src="assets/icons/sun.png" alt="Sun">
+        <p>{{ ciudad.stateSky.description }}</p>
+        <hr>
+        <div class="temperaturas">
+          <p>MAX: {{ ciudad.temperatures.max }}°C</p>
+          <p>MIN {{ ciudad.temperatures.min }}°C</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
