@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProvinciasComponent } from './provincias/provincias.component';
+import { ProvinciaDetalleComponent } from './provincia-detalle/provincia-detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProvinciasComponent
+    ProvinciasComponent,
+    ProvinciaDetalleComponent
   ],
   imports: [
     BrowserModule,

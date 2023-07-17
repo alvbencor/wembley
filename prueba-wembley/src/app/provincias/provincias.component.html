@@ -3,7 +3,7 @@
 <div class="provincias-container">
   <div *ngFor="let provincia of provincias">
     <div class="provincia">
-      <div>{{ provincia.NOMBRE_PROVINCIA }}</div>
+      <div><a [routerLink]="['/provincia', provincia.NOMBRE_PROVINCIA]">{{ provincia.NOMBRE_PROVINCIA }}</a></div>
       <button (click)="eliminarProvincia(provincia)">Eliminar</button>
     </div>
   </div>
