@@ -1,189 +1,347 @@
-body{
-    background-color: rgb(237, 237, 237);
-    margin: 0 auto;
-    color: rgb(29, 29, 29);
-    font-family: 'Montserrat', sans-serif;
+body {
+  background-color: rgb(237, 237, 237);
+  margin: 0 auto;
+  color: rgb(29, 29, 29);
+  font-family: 'Montserrat', sans-serif;
 }
 
-.cuerpo{
-    width: 80%;
-    margin: 0 auto;
+a,
+a:visited {
+  text-decoration: none;
+  color: rgb(29, 29, 29);
 }
 
-.cabecera{
-    width: 100vw;
-    height: 30vh;
-    margin: 0;
-    padding: 0;
-    background: rgb(12, 8, 87);
-    background: linear-gradient(32deg, rgb(12, 8, 87) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
+.cuerpo {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.fecha{
-    color: aquamarine;
-    display: flex;
-    flex-direction: row;
-    padding:1rem;
+.cabecera {
+  width: 100vw;
+  height: 30vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(32deg, rgb(12, 8, 87) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-h1{
-    font-size: 3rem;
-    color: aliceblue;
-    letter-spacing: .6rem;
+
+.fecha {
+  color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: aliceblue;
+  letter-spacing: .6rem;
 }
 
 .ciudades {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
-  }
-  
-  .ciudad {
-    max-width: 80%;
-    list-style: none;
-    border-radius: .5rem;
-    background-color: white;
-    padding: 1rem;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Nunito Sans', sans-serif;
-  }
-  
-  .ciudad > img {
-    width: 20%;
-  }
-  
-  .ciudad > h3 {
-    text-transform: uppercase;
-  }
-  
-  .ciudad > hr {
-    border: none;
-    height: 1px;
-    background-color: #eae8e8;
-  }
-  
-  .ciudad > span {
-    font-size: 3rem;
-    color: blue;
-  }
-  
-  .ciudad .temperaturas {
-    display: flex;
-    justify-content: space-around;
-    font-weight: bold;
-    font-family: 'Nunito Sans', sans-serif;
-  }
-  
-.contenidoCiudad{
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Nunito Sans', sans-serif;
-    
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 3rem;
 }
 
-.contenidoCiudad > img{
-    width: 20%;
-}
-.contenidoCiudad > h3{
-    text-transform: uppercase;
-}
-
-
-.contenidoCiudad > hr{
-    border: none;
-    height: 1px;
-    background-color: #eae8e8;
+.ciudad {
+  max-width: 80%;
+  list-style: none;
+  border-radius: .5rem;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.contenidoCiudad > span{
-    font-size: 3rem;
-    color: blue;
+.ciudad>hr {
+  border: none;
+  height: 1px;
+  background-color: #eae8e8;
 }
 
-.temperaturas{
-    display: flex;
-    justify-content: space-around;
-    font-weight: bold;
-    font-family: 'Nunito Sans', sans-serif;
+.ciudad>span {
+  font-size: 3rem;
+  color: rgb(71, 93, 238);
 }
 
-.prevision{
-    width: 50%;
-    padding: 2rem;
-    margin: 0 auto;
-    
+.ciudad .temperaturas {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.fecha{
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
+.contenidoCiudad {
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.fecha > button{
-    padding: 1rem;
-    border-radius: .5rem;
-    border: 0;
-    min-width: 150px;
+.cielo {
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(199, 198, 198);
 }
 
-.hoy, .tomorrow{
-    border-left: 4px solid black;
-    padding-left: 1rem;
+.filete {
+  width: 100%;
 }
-.volver{
-    width: 100%;
+
+.temperaturaMaxima,
+.temperaturaMinima {
+  display: flex;
+  flex-direction: row;
+  color: #7a739b;
+  text-align: right;
+  justify-content: flex-end;
 }
-.volver > a{
-    display: flex;
-    justify-content: right;
-    color: white;
-    padding-right: 3rem;
-    text-decoration: none;
-    font-weight: 300;
-    font-family: 'Nunito Sans', sans-serif;
+
+.temperaturaMinima {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
-.flecha{
-    width: 1rem;
-    filter:invert(1);
-    margin-right: .5rem;
+
+.temperaturas img {
+  width: 20px;
+}
+
+.temperaturaMinima img {
+  filter: hue-rotate(-100deg);
+}
+
+.filete>hr {
+  border: none;
+  height: 1px;
+  margin-left: 80%;
+  margin-top: 1rem;
+  background-color: #eae8e8;
+}
+
+.temperaturas {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.nombreCiudad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nombreCiudad h3 {
+  color: #4b3c91;
+}
+
+.iconoTiempo>img {
+  max-width: 30px;
+}
+
+.prevision {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.prevision h2 {
+  color: rgb(71, 93, 238);
+}
+
+.fecha a {
+  padding-bottom: .5rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  border-bottom-color: transparent;
+  color: rgb(71, 93, 238);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fechaShort {
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.enlaces {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.enlaces a.activo {
+  color: rgb(71, 93, 238);
+  border-bottom: 2px solid rgb(71, 93, 238);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.volver {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.volver>a {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  padding-right: 3rem;
+  text-decoration: none;
+  font-weight: 300;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.flecha {
+  width: 1rem;
+  filter: invert(1);
+  margin-right: .5rem;
 }
 
 .provincias-container {
-    width: 80vh;
-    max-height: 40vh;
-    margin: 0 auto;
-    overflow-y: auto;
-    text-align: center;
-    margin-top: 10vh;
-  }
-  
-  .provincia {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+  width: 80vh;
+  max-height: 40vh;
+  margin: 0 auto;
+  overflow-y: auto;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.provincia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.provincia:hover {
+  background-color: aliceblue;
+  border-left: 3px solid rgb(21, 42, 228);
+}
+
+.provincia>button {
+  background-color: #f53838;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: .3rem;
+}
+
+.provincia>a {
+  cursor: pointer;
+}
+
+.filtroBusqueda {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filtroProvincias {
+  padding: 1rem;
+  border-radius: .3rem;
+  border: 0;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.hoy>p {
+  color: black;
+  line-height: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.tomorrow>p {
+  color: black;
+  line-height: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.alfabetico>button {
+  padding: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  color: rgb(29, 29, 29);
+  filter: opacity(50%);
+}
+
+.alfabetico>button>img {
+  width: 20px;
+  margin-right: .5rem;
+  filter: opacity(70%);
+  font-variant: small-caps;
+}
+
+.filtroBusqueda>input:focus {
+  padding: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+}
+
+.bg {
+  background: linear-gradient(225deg, #83a9f5, #385fb0, #19449f, #1b3978);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 86% 0%
   }
 
-  .provincia:hover{
-    background-color: aliceblue;
-    border-left: 3px solid rgb(21, 42, 228);
-  }
-  
-  .provincia > button {
-    background-color: #f53838;
-    color: #fff;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: .3rem;
+  50% {
+    background-position: 15% 100%
   }
 
-  .provincia > a{
-    cursor: pointer;
+  100% {
+    background-position: 86% 0%
   }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 86% 0%
+  }
+
+  50% {
+    background-position: 15% 100%
+  }
+
+  100% {
+    background-position: 86% 0%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 86% 0%
+  }
+
+  50% {
+    background-position: 15% 100%
+  }
+
+  100% {
+    background-position: 86% 0%
+  }
+}

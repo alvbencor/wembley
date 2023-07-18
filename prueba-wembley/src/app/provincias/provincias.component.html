@@ -1,18 +1,22 @@
-<div class="cabecera">
-  <h1>Lista de Provincias</h1>
-
+<div class="cabecera bg">
+  <h1>Listado de provincias</h1>
 </div>
+
 <div class="provincias-container">
-    <div *ngFor="let provincia of provincias">
-      <div class="provincia">
-        <div>
-          <a [routerLink]="['/provincia', provincia.CODPROV, provincia.NOMBRE_PROVINCIA]">
-            {{ provincia.NOMBRE_PROVINCIA }}
-          </a>
-        </div>
-        <button (click)="eliminarProvincia(provincia)">Eliminar</button>
-      </div>
+  <div class="filtroBusqueda">
+    <input type="text" [(ngModel)]="filtroProvincias" placeholder="Filtrar por provincias" class="filtroProvincias"
+      (focus)="ocultarBoton()" (blur)="mostrarBoton()" />
+    <div class="alfabetico" *ngIf="mostrarBotonOrden">
+      <button (click)="cambiarOrden()"> <img src="assets/icons/swap-vertical-sharp.svg" alt="">
+        {{ ordenAlfabetico ? 'A z' : 'Z a' }}</button>
     </div>
   </div>
-  
-
+  <div *ngFor="let provincia of provincias | filter: filtroProvincias" class="provincia">
+    <div>
+      <a [routerLink]="['/provincia', provincia.CODPROV, provincia.NOMBRE_PROVINCIA]">
+        {{ provincia.NOMBRE_PROVINCIA }}
+      </a>
+    </div>
+    <button (click)="eliminarProvincia(provincia)">Eliminar</button>
+  </div>
+</div>
